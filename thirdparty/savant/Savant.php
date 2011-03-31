@@ -40,7 +40,7 @@ define ('SAVANT_ERROR_FILTER',                9);
 define ('SAVANT_ERROR_FILTER_NOT_FOUND',     10);
 define ('SAVANT_ERROR_TOKEN_NOT_FOUND',      11);
 
-// this class was modified by Piotr Bogdan <silence@dotgeek.org>
+// this class was modified by Piotr Bogdan <ppbogdan@gmail.com>
 // to bring it into PHP5 E_STRICT compliance
 // - removed PEAR dependency, it was only needed for error handling,
 //   used trigger_error instead

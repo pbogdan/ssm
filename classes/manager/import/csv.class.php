@@ -3,7 +3,7 @@
 // +--------------------------------------------------------------------------+
 // | csv.class.php                                                            |
 // +--------------------------------------------------------------------------+
-// | Copyright (c) 2004 Piotr Bogdan <silence@dotgeek.org>                    |
+// | Copyright (c) 2004 Piotr Bogdan <ppbogdan@gmail.com>                     |
 // +--------------------------------------------------------------------------+
 // | Licensed under the revised BSD License;                                  |
 // | you may not use this file except in compliance with the License.         |
