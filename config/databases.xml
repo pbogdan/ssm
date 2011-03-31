@@ -1,0 +1,9 @@
+<?xml version='1.0'?>
+<databases>
+	<!-- <database name="" path="" visible="" />
+	name    - name to be displayed
+	path    - path to file, relative or full path
+	visible - whether to show this database
+	-->
+	<database name="test" path="test.sqlite" visible="true" />
+</databases>

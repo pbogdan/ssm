@@ -1,0 +1,14 @@
+NEW FEATURES IN VERSION 0.1.3
+=============================
+For full list of changes please reffer to ChangeLog file.
+
+- ability to sort results when browsing table
+- browser/os dependent css
+- deleting records
+- droping tables
+- editing records
+- inserting records with functions support
+- ability to change column from NULL to NOT NULL
+- "everywhere" query box support
+- emptying table
+- lot of small bugfixes - take a look at ChangeLog file

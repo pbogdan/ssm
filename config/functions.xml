@@ -1,0 +1,240 @@
+<?xml version='1.0'?>
+<functions>
+	<!-- 
+	name    - name that will be used to register function in SQL queries
+	builtin - whether function it's native or user defined function
+	code    - if user defined this is place for php code
+	args    - number of arguments that function expect -1 for not fixed
+	-->
+	<!-- builtin functions (reference: www.sqlite.org/sqlitelang.html) :
+	- abs
+	- coalesce
+	- glob
+	- ifnull
+	- last_insert_rowid
+	- length
+	- like
+	- lower
+	- max
+	- min
+	- nullif
+	- random
+	- round
+	- soundex
+	- sqlite_version
+	- substr
+	- typeof
+	- upper
+	-->
+	<function>
+		<name>abs</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>1</args>
+	</function>
+	<function>
+		<name>coalesce</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>-1</args>
+	</function>
+	<function>
+		<name>glob</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>2</args>
+	</function>
+	<function>
+		<name>ifnull</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>2</args>
+	</function>
+	<function>
+		<name>last_insert_rowid</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>0</args>
+	</function>
+	<function>
+		<name>length</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>1</args>
+	</function>
+	<function>
+		<name>like</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>2</args>
+	</function>
+	<function>
+		<name>lower</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>1</args>
+	</function>
+	<function>
+		<name>max</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>-1</args>
+	</function>
+	<function>
+		<name>min</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>-1</args>
+	</function>
+	<function>
+		<name>nullif</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>2</args>
+	</function>
+	<function>
+		<name>random</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>0</args>
+	</function>
+	<function>
+		<name>round</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>1</args>
+	</function>
+	<function>
+		<name>soundex</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>1</args>
+	</function>
+	<function>
+		<name>sqlite_version</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args></args>
+	</function>
+	<function>
+		<name>substr</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>3</args>
+	</function>
+	<function>
+		<name>typeof</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>1</args>
+	</function>
+	<function>
+		<name>upper</name>
+		<builtin>true</builtin>
+		<code></code>
+		<args>1</args>
+	</function>
+	<!-- user defined functions -->
+	<!-- just few examples: -->
+	<function>
+		<name>md5</name>
+		<builtin>false</builtin>
+		<code>
+		<!-- added 's' postfix to function name to not override native
+		php function, cause this code will be eval()-ed
+		anyway same approach can be achieved in following way:
+			SELECT php('md5', filename) FROM files
+		( was last sentence in English? :D )
+		-->
+		function md5s($string) {
+			return md5($string);
+		}
+		</code>
+		<args>1</args>
+	</function>
+	<function>
+		<name>sha1</name>
+		<builtin>false</builtin>
+		<code>
+		function sha1s($string) {
+			return sha1($string);
+		}
+		</code>
+		<args>1</args>
+	</function>
+	<function>
+		<name>now</name>
+		<builtin>false</builtin>
+		<code>
+		function now() {
+			return time();
+		}
+		</code>
+		<args>0</args>
+	</function>
+	<!--
+	same as for functions, but:
+	stepcode  - if user defined this is place for php stepcode
+	finalcode - if user defined this is place for php finalcode
+	-->
+	<!-- builtin aggregations
+	- avg
+	- count
+	- max
+	- min
+	- sum
+	-->
+	<aggregation>
+		<name>avg</name>
+		<builtin>true</builtin>
+		<stepcode></stepcode>
+		<finalcode></finalcode>
+		<args>1</args>
+	</aggregation>
+	<aggregation>
+		<name>count</name>
+		<builtin>true</builtin>
+		<stepcode></stepcode>
+		<finalcode></finalcode>
+		<args>1</args>
+	</aggregation>
+	<aggregation>
+		<name>max</name>
+		<builtin>true</builtin>
+		<stepcode></stepcode>
+		<finalcode></finalcode>
+		<args>1</args>
+	</aggregation>
+	<aggregation>
+		<name>min</name>
+		<builtin>true</builtin>
+		<stepcode></stepcode>
+		<finalcode></finalcode>
+		<args>1</args>
+	</aggregation>
+	<aggregation>
+		<name>sum</name>
+		<builtin>true</builtin>
+		<stepcode></stepcode>
+		<finalcode></finalcode>
+		<args>1</args>
+	</aggregation>
+	<!-- user defined aggregations -->
+	<aggregation>
+		<name>max_len</name>
+		<builtin>false</builtin>
+		<stepcode>
+		function max_len_step(&amp;$context, $string) {
+		    if (strlen($string) > $context) {
+		        $context = strlen($string);
+		    }
+		}
+		</stepcode>
+		<finalcode>
+		function max_len_finalize(&amp;$context) {
+		    return $context;
+		}
+		</finalcode>
+		<args>1</args>
+	</aggregation>
+</functions>

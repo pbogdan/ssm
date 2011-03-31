@@ -1,0 +1,77 @@
+<?xml version='1.0'?>
+<mapping>
+	<forwards>
+		<!-- module:welcome -->
+		<forward name="w-main" module="welcome" view="main" />
+		<!-- module:database -->
+		<forward name="d-main" module="database" view="main" />
+		<forward name="d-newtable" module="database" view="newtable" />
+		<forward name="d-query" module="database" view="query" />
+		<forward name="d-queryresults" module="database" view="queryresults" />
+		<!-- module:table -->
+		<forward name="t-structure" module="table" view="main" />
+		<forward name="t-main" module="table" view="main" />
+		<forward name="t-newcolumns" module="table" view="newcolumns" />
+		<forward name="t-browse" module="table" view="browse" />
+		<forward name="t-editrecord" module="table" view="editrecord" />
+		<forward name="t-insertrecord" module="table" view="insert" />
+		<!-- module:column -->
+		<forward name="c-edit" module="column" view="edit" />
+	</forwards>
+	<actions>
+		<!-- module:database -->
+		<action name="newTable" class="newtable" file="actions/database/newtable.class.php">
+			<forward name="d-main" />
+			<forward name="d-newtable" />
+		</action>
+		<action name="buildTable" class="buildtable" file="actions/database/buildtable.class.php">
+			<forward name="d-main" />
+			<forward name="d-newtable" />
+		</action>
+		<action name="buildQuery" class="buildquery" file="actions/database/buildquery.class.php">
+			<forward name="d-query" />
+			<forward name="d-queryresults" />
+		</action>
+		<action name="dropTable" class="dropTable" file="actions/database/droptable.class.php">
+			<forward name="d-main" />
+		</action>
+		<!-- module:column -->
+		<action name="editColumns" class="editcolumns" file="actions/column/editcolumns.class.php">
+			<forward name="t-main" />
+			<forward name="c-edit" />
+		</action>
+		<action name="dropColumns" class="dropcolumns" file="actions/column/dropcolumns.class.php">
+			<forward name="t-main" />
+		</action>
+		<action name="updateColumns" class="updatecolumns" file="actions/column/updatecolumns.class.php">
+			<forward name="t-main" />
+			<forward name="c-edit" />
+		</action>
+		<!-- module:table -->
+		<action name="newColumns" class="newcolumns" file="actions/table/newcolumns.class.php">
+			<forward name="t-main" />
+			<forward name="t-newcolumns" />
+		</action>
+		<action name="addColumns" class="addcolumns" file="actions/table/addcolumns.class.php">
+			<forward name="t-main" />
+			<forward name="t-newcolumns" />
+		</action>
+		<action name="deleteRecord" class="deleterecord" file="actions/table/deleterecord.class.php">
+			<forward name="t-browse" />
+		</action>
+		<action name="editRecord" class="editrecord" file="actions/table/editrecord.class.php">
+			<forward name="t-editrecord" />
+		</action>
+		<action name="updateRecord" class="updaterecord" file="actions/table/updaterecord.class.php">
+			<forward name="t-browse" />
+		</action>
+		<action name="insertRecord" class="insertrecord" file="actions/table/insertrecord.class.php">
+			<forward name="t-browse" />
+			<forward name="t-insertrecord" />
+		</action>
+		<action name="cleanTable" class="cleantable" file="actions/table/cleantable.class.php">
+			<forward name="d-main" />
+		</action>
+	</actions>
+</mapping>
+

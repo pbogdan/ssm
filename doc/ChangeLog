@@ -1,0 +1,325 @@
+2004-10-18  Piotr Bogdan  <silence@dotgeek.org>
+
+	* messages/pl.lang.php: added translation from database/query
+
+	* templates/database/query.tpl.php: put text in i18n()
+
+	* messages/pl.lang.php: added translation from welcome/main
+
+	* templates/welcome/main.tpl.php: added warning message
+
+	* doc/TODO: *** empty log message ***
+
+	* templates/welcome/about.tpl.php: provided links to sourceforge site
+
+	* messages/pl.lang.php: added translation from preferences page
+
+	* templates/welcome/preferences.tpl.php, views/welcome/preferences.inc.php:
+	preferences page
+
+	* templates/table/editrecord.tpl.php:
+	textarea instead of input type=text for varchar/text columns
+
+2004-10-17  Piotr Bogdan  <silence@dotgeek.org>
+
+	* doc/TODO: *** empty log message ***
+
+	* templates/welcome/about.tpl.php: changed layout a bit
+
+	* doc/TODO, doc/NEWS: *** empty log message ***
+
+	* config/mapping.xml: new action - cleanTable
+
+	* templates/welcome/about.tpl.php: added info
+
+	* templates/images/piotrbogdan.jpg: haha, picture of mine
+
+	* actions/table/cleantable.class.php:
+	changed redirection to database/main
+
+	* templates/database/main.tpl.php, templates/table/menu.tpl.php, actions/table/cleantable.class.php:
+	cleaning table
+
+	* messages/pl.lang.php: few messages from insert.tpl.php
+
+	* templates/table/browse.tpl.php: put text in i18n()
+
+	* actions/table/insertrecord.class.php, templates/table/insert.tpl.php:
+	option for adding another record and not redirecting to browser
+
+	* templates/table/main.tpl.php: put text in i18n()
+
+	* messages/pl.lang.php: most recent translation
+
+	* classes/manager/import/xml.class.php: small bugfix
+
+	* doc/TODO: *** empty log message ***
+
+2004-10-16  Piotr Bogdan  <silence@dotgeek.org>
+
+	* templates/database/queryresults.tpl.php: fixed typo
+
+	* classes/manager/parsers/colorizequery.class.php: changed colors
+
+	* templates/table/browse.tpl.php:
+	truncating displayed values to 30 characters
+
+	* doc/NEWS, doc/TODO: *** empty log message ***
+
+	* actions/table/deleterecord.class.php:
+	fixed handling numeric values in building WHERE statement
+
+	* actions/table/deleterecord.class.php: query box feature used
+
+	* views/welcome/about.inc.php, views/welcome/main.inc.php, views/table/insert.inc.php, views/table/main.inc.php, views/table/newcolumns.inc.php, views/export/main.inc.php, views/export/view.inc.php, views/database/main.inc.php, views/database/newtable.inc.php, views/column/edit.inc.php:
+	new menu feature used
+
+	* actions/table/insertrecord.class.php: inserting records interface
+
+	* views/table/browse.inc.php, views/table/editrecord.inc.php:
+	new menu feature used
+
+	* actions/table/updaterecord.class.php: query box feature used
+
+	* views/export/view.inc.php: added displaying of header, footer
+
+	* views/database/query.inc.php: new menu feature used
+
+	* views/database/queryresults.inc.php:
+	now working as everywhere query box
+
+	* views/menu.inc.php: automagically generates menus, and query box
+
+	* templates/export/view.tpl.php: added displaying of header, footer
+
+	* templates/database/queryresults.tpl.php:
+	now working as everywhere query box
+
+	* config/functions.xml: added sample aggregation
+
+	* classes/manager/export/xml.class.php:
+	implemented Header(), Footer() methods, small bug fixes as well
+
+	* classes/manager/export/csv.class.php, classes/manager/export/sql.class.php:
+	implemented Header(), Footer() methods
+
+	* classes/manager/functions.class.php: fixed initing aggregations
+
+	* classes/manager/query.class.php: fixed empty message
+
+	* classes/manager/export.class.php:
+	added Header(), Footer() methods to interface exporter
+
+	* actions/database/buildquery.class.php:
+	changed redirection to use query box feature
+
+2004-10-15  Piotr Bogdan  <silence@dotgeek.org>
+
+	* doc/NEWS, doc/TODO: *** empty log message ***
+
+	* templates/table/insert.tpl.php, views/table/insert.inc.php:
+	removed aggregations from list (lol)
+
+	* classes/manager/functions.class.php: fixed initing aggregations
+
+	* classes/manager/functions.class.php:
+	getting instance of manager by manager::instance() not new manager(), also now eval()-ing code in _initCode(), instead of php_check_syntax()
+
+	* doc/NEWS, doc/TODO: *** empty log message ***
+
+	* views/welcome/main.inc.php, actions/table/updaterecord.class.php, actions/table/deleterecord.class.php:
+	getting instance of manager by manager::instance() not new manager()
+
+	* classes/manager/manager.class.php: fixed phpdoc
+
+	* templates/table/insert.tpl.php, views/table/insert.inc.php:
+	first working release
+
+	* config/mapping.xml: new forward - t-insertrecord
+
+2004-10-11  Piotr Bogdan  <silence@dotgeek.org>
+
+	* templates/style.tpl.php: temporary solution
+
+	* templates/table/insert.tpl.php: interface for inserting new records
+
+	* config/mapping.xml: new action - insertRecord
+
+	* templates/table/editrecord.tpl.php: underline for primary key column
+
+	* templates/table/menu.tpl.php: fixed link for inserting records
+
+	* classes/manager/functions.class.php:
+	changed method name Functions() to getFunctions() to not override constructor
+
+	* classes/manager/functions.class.php:
+	iterate all databases when registering aggregation/function
+
+2004-10-10  Piotr Bogdan  <silence@dotgeek.org>
+
+	* doc/TODO: *** empty log message ***
+
+	* classes/manager/manager.class.php:
+	require_once()-ed function.class.php
+
+	* classes/manager/functions.class.php: aggregations/function managment
+
+	* config/functions.xml: list of functions/aggregations
+
+	* config/config.xml: new property in group 'general' - funcFile
+
+2004-10-09  Piotr Bogdan  <silence@dotgeek.org>
+
+	* templates/bottom.tpl.php, templates/errors.tpl.php, templates/welcome/about.tpl.php, templates/welcome/main.tpl.php, templates/welcome/menu.tpl.php, templates/table/editrecord.tpl.php, templates/table/main.tpl.php, templates/table/menu.tpl.php, templates/table/newcolumns.tpl.php, templates/export/options.tpl.php, templates/export/view.tpl.php, templates/database/main.tpl.php, templates/database/menu.tpl.php, templates/database/newtable.tpl.php, templates/database/query.tpl.php, templates/database/queryresults.tpl.php, templates/column/edit.tpl.php:
+	new design
+
+2004-10-08  Piotr Bogdan  <silence@dotgeek.org>
+
+	* doc/TODO, doc/NEWS: *** empty log message ***
+
+	* actions/table/updaterecord.class.php: implements updateRecord action
+
+	* config/mapping.xml: new action - updateRecord
+
+	* doc/TODO: *** empty log message ***
+
+	* doc/INSTALL: fixed exporting of smallint, tinyint, bigint
+
+	* doc/NEWS: *** empty log message ***
+
+	* classes/manager/export/sql.class.php:
+	fixed exporting of smallint, tinyint, bigint
+
+2004-10-07  Piotr Bogdan  <silence@dotgeek.org>
+
+	* views/table/browse.inc.php: added ability to sort results
+
+	* templates/table/browse.tpl.php:
+	changed layout & added links for sorting results
+
+	* templates/table/editrecord.tpl.php: changed request method to POST
+
+	* classes/validator.class.php: new method - _isNull()
+
+2004-10-06  Piotr Bogdan  <silence@dotgeek.org>
+
+	* index.php: added dedication
+
+2004-10-04  Piotr Bogdan  <silence@dotgeek.org>
+
+	* views/table/editrecord.inc.php, actions/table/editrecord.class.php, templates/table/editrecord.tpl.php:
+	*** empty log message ***
+
+2004-09-30  Piotr Bogdan  <silence@dotgeek.org>
+
+	* config/mapping.xml: new action - editRecord
+
+	* templates/table/browse.tpl.php:
+	fixed typo in link for editing records
+
+2004-09-28  Piotr Bogdan  <silence@dotgeek.org>
+
+	* templates/bottom.tpl.php: version number taken from CVS
+
+	* templates/table/menu.tpl.php: added link for deleting table
+
+	* config/mapping.xml: new action - dropTable
+
+	* templates/database/main.tpl.php: added link for deleting tables
+
+	* actions/database/droptable.class.php, actions/table/deleterecord.class.php:
+	initial release
+
+	* classes/manager/table.class.php:
+	new method _alterBuildInsertQuery - handles transfering data to new table structure when column changed from NULL to NOT NULL, and records contained NULL values
+
+2004-09-27  Piotr Bogdan  <silence@dotgeek.org>
+
+	* templates/table/browse.tpl.php:
+	changed action for deleting record to 'deleteRecord'
+
+	* classes/actionform.class.php:
+	form vars now taken from $_REQUEST, to allow sending action request through a link
+
+	* config/mapping.xml: new action deleteRecord
+
+	* templates/images/delete.png, templates/images/edit.png, templates/images/sqlite.gif:
+	*** empty log message ***
+
+	* templates/top.tpl.php: removed logo and background-color from <body>
+
+2004-09-26  Piotr Bogdan  <silence@dotgeek.org>
+
+	* templates/table/browse.tpl.php: fixed bad link for deleting record
+
+	* templates/table/browse.tpl.php:
+	added links for editing/deleting records
+
+	* classes/exceptions/validatorexception.class.php:
+	removed parent::__construct() in cunstructor
+
+	* doc/TODO: *** empty log message ***
+
+	* templates/style.tpl.php: browser/os dependent css
+
+	* index.php: session initialization was done too late
+
+	* functions/util.inc.php: fixed typo
+
+	* templates/top.tpl.php: new way of css-ing
+
+	* templates/style.css: *** empty log message ***
+
+	* functions/util.inc.php:
+	added new functions to ivestigate user's environment - getBrowser(), getOS(), getIP()
+
+2004-09-24  Piotr Bogdan  <silence@dotgeek.org>
+
+	* classes/exceptions/ioexception.class.php, classes/exceptions/phpexception.class.php, classes/exceptions/siteexception.class.php, classes/exceptions/sqlitexception.class.php, classes/exceptions/validatorexception.class.php:
+	adjusted to new "format" of myexception
+
+	* classes/myexception.class.php: removed non-critical exceptions
+
+2004-09-23  Piotr Bogdan  <silence@dotgeek.org>
+
+	* classes/template.class.php, index.php:
+	appended trailing slash in Savant options
+
+	* doc/TODO: *** empty log message ***
+
+	* index.php: added forgotten require_once('functions/util.inc.php')
+
+	* index.php: added call to function fixMagicQuotes
+
+	* functions/util.inc.php: added function fixMagicQuotes
+
+	* doc/TODO: *** empty log message ***
+
+	* index.php, classes/myexception.class.php:
+	fixed typo - missing () in ob_end_clean call
+
+	* classes/template.class.php:
+	instance() - use default options when no parameter passed
+
+	* classes/controller.class.php:
+	fixed warning with allow_call_time_pass_reference
+
+	* classes/myexception.class.php, index.php:
+	changed way of cleaning output buffers
+
+	* views/column/edit.inc.php: stupid bug with missing else
+
+2004-09-22  Piotr Bogdan  <silence@dotgeek.org>
+
+	* classes/manager/table.class.php, classes/manager/manager.class.php, classes/manager/import.class.php, classes/manager/export.class.php, classes/manager/database.class.php:
+	phpdoc comments
+
+2004-09-20  Piotr Bogdan  <silence@dotgeek.org>
+
+	* classes/manager/column.class.php: phpdoc comments
+
+	* .cvsignore, actions/column/dropcolumns.class.php, actions/column/editcolumns.class.php, actions/column/updatecolumns.class.php, actions/database/buildquery.class.php, actions/database/buildtable.class.php, actions/database/newtable.class.php, actions/table/addcolumns.class.php, actions/table/newcolumns.class.php, classes/action.class.php, classes/actionerrors.class.php, classes/actionform.class.php, classes/actionforward.class.php, classes/actionmapping.class.php, classes/config.class.php, classes/controller.class.php, classes/exceptions/ioexception.class.php, classes/exceptions/phpexception.class.php, classes/exceptions/siteexception.class.php, classes/exceptions/sqlitexception.class.php, classes/exceptions/validatorexception.class.php, classes/locale.class.php, classes/manager/column.class.php, classes/manager/database.class.php, classes/manager/export.class.php, classes/manager/export/csv.class.php, classes/manager/export/sql.class.php, classes/manager/export/xml.class.php, classes/manager/import.class.php, classes/manager/import/csv.class.php, classes/manager/import/sql.class.php, classes/manager/import/xml.class.php, classes/manager/manager.class.php, classes/manager/parsers/colorizequery.class.php, classes/manager/parsers/selectquery.class.php, classes/manager/parsers/tokenize.class.php, classes/manager/query.class.php, classes/manager/table.class.php, classes/myexception.class.php, classes/template.class.php, classes/validator.class.php, config/config.xml, config/databases.xml, config/mapping.xml, doc/LICENSE, doc/README, doc/TODO, functions/locale.inc.php, functions/phperrorhandler.inc.php, index.php, messages/pl.lang.php, src.php, templates/bottom.tpl.php, templates/column/edit.tpl.php, templates/database/main.tpl.php, templates/database/menu.tpl.php, templates/database/newtable.tpl.php, templates/database/query.tpl.php, templates/database/queryresults.tpl.php, templates/errors.tpl.php, templates/exceptions/ioexception.tpl.php, templates/exceptions/myexception.tpl.php, templates/exceptions/phpexception.tpl.php, templates/exceptions/sqliteexception.tpl.php, templates/export/options.tpl.php, templates/export/view.tpl.php, templates/functions.js, templates/images/sqlite.gif, templates/style.css, templates/table/browse.tpl.php, templates/table/main.tpl.php, templates/table/menu.tpl.php, templates/table/newcolumns.tpl.php, templates/top.tpl.php, templates/welcome/main.tpl.php, templates/welcome/menu.tpl.php, thirdparty/savant/Savant.php, thirdparty/savant/Savant/Filter.php, thirdparty/savant/Savant/Plugin.php, thirdparty/savant/Savant/filters/Savant_Filter_colorizeCode.php, thirdparty/savant/Savant/filters/Savant_Filter_trimwhitespace.php, thirdparty/savant/Savant/plugins/Savant_Plugin_ahref.php, thirdparty/savant/Savant/plugins/Savant_Plugin_checkbox.php, thirdparty/savant/Savant/plugins/Savant_Plugin_checkboxes.php, thirdparty/savant/Savant/plugins/Savant_Plugin_cycle.php, thirdparty/savant/Savant/plugins/Savant_Plugin_dateformat.php, thirdparty/savant/Savant/plugins/Savant_Plugin_image.php, thirdparty/savant/Savant/plugins/Savant_Plugin_input.php, thirdparty/savant/Savant/plugins/Savant_Plugin_javascript.php, thirdparty/savant/Savant/plugins/Savant_Plugin_modify.php, thirdparty/savant/Savant/plugins/Savant_Plugin_options.php, thirdparty/savant/Savant/plugins/Savant_Plugin_radios.php, thirdparty/savant/Savant/plugins/Savant_Plugin_stylesheet.php, thirdparty/savant/Savant/plugins/Savant_Plugin_textarea.php, views/column/edit.inc.php, views/database/main.inc.php, views/database/newtable.inc.php, views/database/query.inc.php, views/database/queryresults.inc.php, views/export/main.inc.php, views/export/view.inc.php, views/table/browse.inc.php, views/table/main.inc.php, views/table/newcolumns.inc.php, views/welcome/main.inc.php:
+
+	* .cvsignore, actions/column/dropcolumns.class.php, actions/column/editcolumns.class.php, actions/column/updatecolumns.class.php, actions/database/buildquery.class.php, actions/database/buildtable.class.php, actions/database/newtable.class.php, actions/table/addcolumns.class.php, actions/table/newcolumns.class.php, classes/action.class.php, classes/actionerrors.class.php, classes/actionform.class.php, classes/actionforward.class.php, classes/actionmapping.class.php, classes/config.class.php, classes/controller.class.php, classes/exceptions/ioexception.class.php, classes/exceptions/phpexception.class.php, classes/exceptions/siteexception.class.php, classes/exceptions/sqlitexception.class.php, classes/exceptions/validatorexception.class.php, classes/locale.class.php, classes/manager/column.class.php, classes/manager/database.class.php, classes/manager/export.class.php, classes/manager/export/csv.class.php, classes/manager/export/sql.class.php, classes/manager/export/xml.class.php, classes/manager/import.class.php, classes/manager/import/csv.class.php, classes/manager/import/sql.class.php, classes/manager/import/xml.class.php, classes/manager/manager.class.php, classes/manager/parsers/colorizequery.class.php, classes/manager/parsers/selectquery.class.php, classes/manager/parsers/tokenize.class.php, classes/manager/query.class.php, classes/manager/table.class.php, classes/myexception.class.php, classes/template.class.php, classes/validator.class.php, config/config.xml, config/databases.xml, config/mapping.xml, doc/LICENSE, doc/README, doc/TODO, functions/locale.inc.php, functions/phperrorhandler.inc.php, index.php, messages/pl.lang.php, src.php, templates/bottom.tpl.php, templates/column/edit.tpl.php, templates/database/main.tpl.php, templates/database/menu.tpl.php, templates/database/newtable.tpl.php, templates/database/query.tpl.php, templates/database/queryresults.tpl.php, templates/errors.tpl.php, templates/exceptions/ioexception.tpl.php, templates/exceptions/myexception.tpl.php, templates/exceptions/phpexception.tpl.php, templates/exceptions/sqliteexception.tpl.php, templates/export/options.tpl.php, templates/export/view.tpl.php, templates/functions.js, templates/images/sqlite.gif, templates/style.css, templates/table/browse.tpl.php, templates/table/main.tpl.php, templates/table/menu.tpl.php, templates/table/newcolumns.tpl.php, templates/top.tpl.php, templates/welcome/main.tpl.php, templates/welcome/menu.tpl.php, thirdparty/savant/Savant.php, thirdparty/savant/Savant/Filter.php, thirdparty/savant/Savant/Plugin.php, thirdparty/savant/Savant/filters/Savant_Filter_colorizeCode.php, thirdparty/savant/Savant/filters/Savant_Filter_trimwhitespace.php, thirdparty/savant/Savant/plugins/Savant_Plugin_ahref.php, thirdparty/savant/Savant/plugins/Savant_Plugin_checkbox.php, thirdparty/savant/Savant/plugins/Savant_Plugin_checkboxes.php, thirdparty/savant/Savant/plugins/Savant_Plugin_cycle.php, thirdparty/savant/Savant/plugins/Savant_Plugin_dateformat.php, thirdparty/savant/Savant/plugins/Savant_Plugin_image.php, thirdparty/savant/Savant/plugins/Savant_Plugin_input.php, thirdparty/savant/Savant/plugins/Savant_Plugin_javascript.php, thirdparty/savant/Savant/plugins/Savant_Plugin_modify.php, thirdparty/savant/Savant/plugins/Savant_Plugin_options.php, thirdparty/savant/Savant/plugins/Savant_Plugin_radios.php, thirdparty/savant/Savant/plugins/Savant_Plugin_stylesheet.php, thirdparty/savant/Savant/plugins/Savant_Plugin_textarea.php, views/column/edit.inc.php, views/database/main.inc.php, views/database/newtable.inc.php, views/database/query.inc.php, views/database/queryresults.inc.php, views/export/main.inc.php, views/export/view.inc.php, views/table/browse.inc.php, views/table/main.inc.php, views/table/newcolumns.inc.php, views/welcome/main.inc.php:
+	New file.
+

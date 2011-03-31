@@ -1,0 +1,28 @@
+TABLE MODULE
+============
++ inserting new records, with full functions, built-in
+  as well as user-defined
++ cleaning all table (DELETE FROM TABLE)
++ dropping table
++ editing/deleting rows (integrate with browsing feature)
++ ability to sort result when browsing table
+
+DATABASE MODULE
+===============
+- loading CSV file with COPY command - for importing pg_dump-ed data
+- VACUUM database
+
+UNSORTED
+========
++ "everywhere" query box support
++ fix exceptions
+- triggers/views/functions/aggregation managment
+- XHTML1 compliance
++ different font sizes for different browsers
++ fix table::_alter() - when changing NULL column to NOT NULL transfering
+  data will fail - constraint failed
++ update translation
++ make complete translation
+- when column name is 'tbl' or 'db' inserting/updating won't work
+- option to rename table
++ preferences page

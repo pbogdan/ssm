@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+	<group name="mvc">
+		<option name="actionKey" value="action" type="string" />
+		<option name="errorKey" value="errors" type="string" />
+		<option name="mapFile" value="config/mapping.xml" type="string" />
+	</group>
+	<group name="general">
+		<option name="dbsFile" value="config/databases.xml" type="string" />
+		<option name="funcFile" value="config/functions.xml" type="string" />
+		<option name="browseLimit" value="30" type="int" />
+	</group>
+	<group name="language">
+		<!-- application native language -->
+		<option name="default" value="en" type="string" />
+		<!-- translation to be used -->
+		<option name="current" value="pl" type="string" />
+		<!-- path to translation files, relative to index.php -->
+		<option name="messagesDir" value="messages" type="string" />
+	</group>
+</config>
